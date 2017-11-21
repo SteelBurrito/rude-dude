@@ -13,7 +13,7 @@
     <div class="blog-header">
     <div class="container">
         <h1 class="blog-title">Personal Blog</h1>
-        <p class="lead blog-description">Personal thoughts and opinions</p>
+        <p class="lead blog-description">thoughts and opinions</p>
     </div>
     </div>
 </header>

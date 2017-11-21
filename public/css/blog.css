@@ -92,13 +92,16 @@ h6,
   border-bottom: .05rem solid #eee;
 }
 .blog-title {
+  font-family: Palatino, Palatino Linotype, Palatino LT STD, Book Antiqua, Georgia, serif;
   margin-bottom: 0;
   font-size: 2rem;
   font-weight: 400;
+  text-align: center;
 }
 .blog-description {
   font-size: 1.1rem;
   color: #999;
+  text-align: center
 }
 
 @media (min-width: 40em) {
@@ -143,10 +146,11 @@ h6,
 
 .blog-post {
   margin-bottom: 4rem;
+  text-align: justify;
 }
 .blog-post-title {
   margin-bottom: .25rem;
-  font-size: 2.5rem;
+  font-size: 2.0rem;
 }
 .blog-post-meta {
   margin-bottom: 1.25rem;
