@@ -1,5 +1,5 @@
     <footer class="blog-footer">
-      <p>Blog built with <a href="https://github.com/laravel/laravel">Laravel</a></p>
+      <p>Blog built with <a href="https://github.com/laravel/laravel">Laravel</a> and <a href="https://github.com/vuejs/vue">Vue.js</a></p>
       <p>
         <a href="#">Back to top</a>
       </p>
