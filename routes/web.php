@@ -14,6 +14,7 @@
 Route::get('/', function() {
     return redirect()->route('blog');
 });
-
-Route::get('/blog', 'PostsController@blog')->name('blog');
+Route::get('/posts', 'PostsController@posts')->name('blog');
+Route::get('/posts/create', 'PostsController@createpage')->name('createpage');
 Route::get('/me', 'PostsController@me')->name('me');
+Route::post('/posts', 'PostsController@store')->name('store');

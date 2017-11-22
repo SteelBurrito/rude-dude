@@ -22,6 +22,7 @@
 
         <main role="main" class="container">
         <div class="d-flex justify-content-center">
+            @yield('postcreate')
             @yield('posts')
             @yield('me')
         </div>

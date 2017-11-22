@@ -2,7 +2,7 @@
 
 @section('title', 'About Me')
 
-@section('meactive')
+@section('active')
   <a class="nav-link" href="{{route ('blog')}}">Blog</a>
   <a class="nav-link active" href="{{route ('me')}}">Who Am I</a>
   <a class="nav-link" href="#">Projects</a>
