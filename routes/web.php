@@ -11,4 +11,8 @@
 |
 */
 
-Route::get('/', 'PostsController@index');
+Route::get('/', function() {
+    return redirect()->route('blog');
+});
+
+Route::get('/blog', 'PostsController@blog')->name('blog');

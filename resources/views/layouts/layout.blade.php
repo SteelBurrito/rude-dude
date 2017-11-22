@@ -17,13 +17,15 @@
         <style></style>
     </head>
 
-  <body>
-    @include ('layouts.nav')
+    <body>
+        @include ('layouts.nav')
 
-    <main role="main" class="container">
-        @include ('posts.index')
-    </main><!-- /.container -->
+        <main role="main" class="container">
+        <div class="d-flex justify-content-center">
+            @yield('posts')
+        </div>
+        </main><!-- /.container -->
 
-    @include ('layouts.footer')
-</body>
+        @include ('layouts.footer')
+    </body>
 </html>

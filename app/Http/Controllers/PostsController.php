@@ -8,6 +8,11 @@ class PostsController extends Controller
 {
     public function index()
     {
-        return view ('layout');
+        return view ('posts.index');
+    }
+
+    public function blog()
+    {
+        return view ('posts.index');
     }
 }

@@ -1,4 +1,15 @@
-<div class="d-flex justify-content-center">
+@extends ('layouts.layout')
+
+@section('blogheader')
+    <div class="blog-header">
+      <div class="container">
+          <h1 class="blog-title">Personal Blog</h1>
+          <p class="lead blog-description">thoughts and opinions</p>
+      </div>
+    </div>
+@endsection
+
+@section('posts')
         <div class="col-sm-8 blog-main">
 
           <div class="blog-post">
@@ -20,4 +31,4 @@
           </nav>
           
         </div><!-- /.blog-main -->
-</div><!-- /.row -->
+@endsection
