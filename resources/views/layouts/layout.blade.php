@@ -7,7 +7,7 @@
             <meta name="author" content="">
             <link rel="icon" href="https://getbootstrap.com/favicon.ico">
 
-            <title>Blog</title>
+            <title>@yield('title')</title>
 
             <!-- Bootstrap core CSS -->
             <link href="{{asset('css/bootstrap.min.css')}}" rel="stylesheet">
@@ -23,6 +23,7 @@
         <main role="main" class="container">
         <div class="d-flex justify-content-center">
             @yield('posts')
+            @yield('me')
         </div>
         </main><!-- /.container -->
 

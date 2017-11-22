@@ -16,3 +16,4 @@ Route::get('/', function() {
 });
 
 Route::get('/blog', 'PostsController@blog')->name('blog');
+Route::get('/me', 'PostsController@me')->name('me');
