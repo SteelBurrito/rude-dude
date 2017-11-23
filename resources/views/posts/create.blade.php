@@ -2,6 +2,19 @@
 
 @section('title', 'Create Blog Post')
 
+@section('texteditorheader')
+<!-- Main Quill library -->
+<script src="//cdn.quilljs.com/1.3.4/quill.js"></script>
+<!-- Theme included stylesheets -->
+<link href="//cdn.quilljs.com/1.3.4/quill.snow.css" rel="stylesheet">
+
+<style>
+    #editor-container {
+    height: 375px;
+    }
+</style>
+@endsection
+
 @section('active')
   <a class="nav-link active" href="{{route ('blog')}}">Blog</a>
   <a class="nav-link" href="{{route ('me')}}">Who Am I</a>
@@ -20,7 +33,7 @@
 
 @section ('postcreate')
 <div class ="container">
-    <form method="POST" action="{{route('store')}}">
+    <form method="POST" action="{{route('store')}}" onsubmit="bindingBody()">
         {{ csrf_field() }}
         <div class="form-group">
             <label for="postTitle">Post Title</label>
@@ -28,7 +41,29 @@
         </div>
         <div class="form-group">
             <label for="postBody">Post Text</label>
-            <textarea class="form-control" name="postBody" id="postBody" rows="10"></textarea>
+            <input name="postBody" type="hidden">
+            <div id="editor-container">
+            </div>
+            <script type="text/javascript">
+                var quill = new Quill('#editor-container', {
+                    modules: {
+                        toolbar: [
+                        [{ header: [1, 2, false] }],
+                            ['bold', 'italic', 'underline']
+                        ]
+                    },
+                    placeholder: 'Compose an epic...',
+                    theme: 'snow'  // or 'bubble'
+                });
+
+                function bindingBody () {
+                    // Populate hidden form on submit
+                    $('input[name=postBody]').val($('.ql-editor').html());
+                };
+            </script>
+            {{--  <div id="editor-container">
+                <textarea class="form-control" name="postBody" id="postBody" rows="10"></textarea>
+            </div>  --}}
         </div>
         <button type="submit" class="btn btn-outline-primary btn-lg btn-block">Submit</button>
     </form>

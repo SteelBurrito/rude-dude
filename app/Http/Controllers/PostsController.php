@@ -22,10 +22,10 @@ class PostsController extends Controller
 
     public function store(Request $request)
     {
-        // print_r($request->all()); die;
+        $bodyDB = json_decode('body');
         Post::create([
     		'title' => $request->input('postTitle'),
-    		'body' => $request->input('postBody'),
+    		'body' => $request->input('postBody')
         ]);
         
         return redirect('/posts');

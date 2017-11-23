@@ -1,20 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-            <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-            <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-            <meta name="description" content="">
-            <meta name="author" content="">
-            <link rel="icon" href="https://getbootstrap.com/favicon.ico">
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="description" content="">
+        <meta name="author" content="">
+        <link rel="icon" href="https://getbootstrap.com/favicon.ico">
 
-            <title>@yield('title')</title>
+        <title>@yield('title')</title>
 
-            <!-- Bootstrap core CSS -->
-            <link href="{{asset('css/bootstrap.min.css')}}" rel="stylesheet">
+        <!-- Bootstrap core CSS -->
+        <link href="{{asset('css/bootstrap.min.css')}}" rel="stylesheet">
 
-            <!-- Custom styles for this template -->
-            <link href="{{asset('css/blog.css')}}" rel="stylesheet">
-        <style></style>
+        <!-- Custom styles for this template -->
+        <link href="{{asset('css/blog.css')}}" rel="stylesheet">
+        @yield('texteditorheader')
     </head>
 
     <body>
