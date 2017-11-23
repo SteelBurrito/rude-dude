@@ -24,7 +24,11 @@
       <div class="blog-post">
         <h2 class="blog-post-title">{{$post->title}}</h2>
         <p class="blog-post-meta">Posted on: {{$post->created_at}}</p>
-        <p>{{$post->body}}</p>
+        <div>
+          <?php
+            echo Helper::formattext($post->body)
+          ?>
+        </div>
         <p class="blog-post-meta text-right">Last updated: {{$post->updated_at}}</p>
       </div>
     @endforeach

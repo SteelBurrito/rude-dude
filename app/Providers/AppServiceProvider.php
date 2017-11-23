@@ -4,6 +4,8 @@ namespace App\Providers;
 
 use Illuminate\Support\ServiceProvider;
 
+use Blade;
+
 class AppServiceProvider extends ServiceProvider
 {
     /**

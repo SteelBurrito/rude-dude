@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Post;
+use Michelf\Markdown;
+//Markdown::defaultTransform($my_text);
 
 class PostsController extends Controller
 {
