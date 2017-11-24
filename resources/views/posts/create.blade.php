@@ -48,22 +48,19 @@
                 var quill = new Quill('#editor-container', {
                     modules: {
                         toolbar: [
-                        [{ header: [1, 2, false] }],
-                            ['bold', 'italic', 'underline']
+                            [{ header: [1, 2, false] }],
+                            ['bold', 'italic', 'underline'],
+                            ['code-block']
                         ]
                     },
                     placeholder: 'Compose an epic...',
-                    theme: 'snow'  // or 'bubble'
+                    theme: 'snow'  
                 });
-
                 function bindingBody () {
                     // Populate hidden form on submit
                     $('input[name=postBody]').val($('.ql-editor').html());
                 };
             </script>
-            {{--  <div id="editor-container">
-                <textarea class="form-control" name="postBody" id="postBody" rows="10"></textarea>
-            </div>  --}}
         </div>
         <button type="submit" class="btn btn-outline-primary btn-lg btn-block">Submit</button>
     </form>

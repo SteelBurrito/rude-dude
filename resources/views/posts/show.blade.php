@@ -14,8 +14,7 @@
 @section('blogheader')
   <div class="blog-header">
     <div class="container">
-        <h1 class="blog-title">Personal Blog</h1>
-        <p class="lead blog-description">thoughts and opinions</p>
+        <h1 class="blog-title">{{$post->title}}</h1>
     </div>
   </div>
 @endsection
@@ -23,16 +22,13 @@
 @section('posts')
 <div class="col-sm-8 blog-main">
     <div class="blog-post">
-        <h2 class="blog-post-title">
-            {{$post->title}}
-        </h2>
         <p class="blog-post-meta">Posted on: {{$post->created_at->toDayDateTimeString()}}</p>
         <div>
         <?php
             echo Helper::formattext($post->body)
         ?>
         </div>
-        <p class="blog-post-meta text-right">Last updated: {{$post->updated_at->toDayDateTimeString()}}</p>
+        {{--  <p class="blog-post-meta text-right">Last updated: {{$post->updated_at->toDayDateTimeString()}}</p>  --}}
     </div>
 </div>
 @endsection

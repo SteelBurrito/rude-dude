@@ -5,16 +5,12 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Post;
 use Michelf\Markdown;
-//Markdown::defaultTransform($my_text);
 
 class PostsController extends Controller
 {
     public function posts()
     {
-        // $posts = \DB::table('posts')
-        //             ->orderBy('created_at')
-        //             ->get();
-        $posts = Post::all();
+        $posts = Post::latest()->get();
         return view ('posts.index', compact('posts'));
     }
 
