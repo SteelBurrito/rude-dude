@@ -1,5 +1,5 @@
     <footer class="blog-footer">
-      <p>Blog built with <a href="https://github.com/laravel/laravel">Laravel</a> and <a href="https://github.com/vuejs/vue">Vue.js</a></p>
+      <p>Blog built with <a href="https://github.com/laravel/laravel">Laravel</a></p>
       <p>
         <a href="#">Back to top</a>
       </p>
@@ -13,4 +13,6 @@
     <script>window.jQuery || document.write('<script src="{{asset('js/jquery.min.js')}}"><\/script>')</script>
     <script src="{{asset('js/popper.min.js.download')}}"></script>
     <script src="{{asset('js/bootstrap.min.js.download')}}"></script>
+    {{--  <!-- Sticky navbar when scroll javascript -->
+    <script src="{{asset('js/stickynav.js')}}" rel="stylesheet"/>  --}}
   

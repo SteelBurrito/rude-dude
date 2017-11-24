@@ -9,12 +9,4 @@ class helpers{
         return  ($formattedText);
     }
 }
-
-
-
 ?>
-<!-- function format($text)
-    {
-        $formattedText = Markdown::defaultTransform($text);
-        return ($formattedText);
-    } -->

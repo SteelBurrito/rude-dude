@@ -11,15 +11,22 @@ class PostsController extends Controller
 {
     public function posts()
     {
-        $posts = \DB::table('posts')
-                    ->orderBy('created_at')
-                    ->get();
+        // $posts = \DB::table('posts')
+        //             ->orderBy('created_at')
+        //             ->get();
+        $posts = Post::all();
         return view ('posts.index', compact('posts'));
     }
 
     public function createpage()
     {
         return view ('posts.create');
+    }
+
+    public function show($id)
+    {
+        $post = Post::find($id);
+        return view ('posts.show', compact('post'));
     }
 
     public function store(Request $request)
@@ -32,7 +39,6 @@ class PostsController extends Controller
         
         return redirect('/posts');
     }
-
 
     public function me()
     {

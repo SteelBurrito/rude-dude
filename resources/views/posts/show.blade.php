@@ -1,6 +1,8 @@
 @extends ('layouts.layout')
 
-@section('title', 'Personal Blog')
+@section('title')
+    {{$post->title}}
+@endsection
 
 @section('active')
   <a class="nav-link active" href="{{route ('blog')}}">Blog</a>
@@ -19,26 +21,18 @@
 @endsection
 
 @section('posts')
-  <div class="col-sm-8 blog-main">
-    @foreach ($posts as $post)
-      <div class="blog-post">
-        <h2 class="blog-post-title">  
+<div class="col-sm-8 blog-main">
+    <div class="blog-post">
+        <h2 class="blog-post-title">
             {{$post->title}}
         </h2>
         <p class="blog-post-meta">Posted on: {{$post->created_at->toDayDateTimeString()}}</p>
         <div>
-          <?php
+        <?php
             echo Helper::formattext($post->body)
-          ?>
+        ?>
         </div>
-        <p><a href="/posts/{{ $post->id }}">Read More</a></p>
         <p class="blog-post-meta text-right">Last updated: {{$post->updated_at->toDayDateTimeString()}}</p>
-      </div>
-    @endforeach
-    
-    <nav class="blog-pagination">
-      <a class="btn btn-outline-primary" href="#">Older</a>
-      <a class="btn btn-outline-secondary disabled" href="#">Newer</a>
-    </nav>   
-  </div><!-- /.blog-main -->
+    </div>
+</div>
 @endsection

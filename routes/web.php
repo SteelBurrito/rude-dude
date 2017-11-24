@@ -17,4 +17,5 @@ Route::get('/', function() {
 Route::get('/posts', 'PostsController@posts')->name('blog');
 Route::get('/posts/create', 'PostsController@createpage')->name('createpage');
 Route::get('/me', 'PostsController@me')->name('me');
+Route::get('/posts/{post}', 'PostsController@show');
 Route::post('/posts', 'PostsController@store')->name('store');
