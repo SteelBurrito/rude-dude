@@ -10,7 +10,7 @@ class PostsController extends Controller
 {
     public function posts()
     {
-        $posts = Post::latest()->get();
+        $posts = Post::latest()->Paginate(1);
         return view ('posts.index', compact('posts'));
     }
 

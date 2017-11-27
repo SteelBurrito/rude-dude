@@ -37,10 +37,13 @@
       </div>
       <hr>
     @endforeach
-    
     <nav class="blog-pagination">
-      <a class="btn btn-outline-secondary disabled" href="#">Newer</a>
-      <a class="btn btn-outline-primary" href="#">Older</a>
-    </nav>   
+      {{$posts->links()}}
+    </nav>  
   </div><!-- /.blog-main -->
 @endsection
+
+
+
+{{--<a class="btn btn-outline-secondary disabled" href="{{$posts->links()}}">Newer</a>
+    <a class="btn btn-outline-primary" href="{{$posts->links()}}">Older</a>  --}}
