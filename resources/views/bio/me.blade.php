@@ -8,6 +8,20 @@
   <a class="nav-link" href="#">Contact Me</a>
 @endsection
 
+@section('blogheader')
+  <div class="blog-header">
+    <div class="container">
+        <h1 class="blog-title">About Me</h1>
+        <p class="lead blog-description">Some dude who does web development.</p>
+    </div>
+  </div>
+@endsection
+
 @section('me')
-    <h1>HELLO</h1>
+    <div class="col-sm-4">
+      <h1>AYYY</h1>
+    </div>
+    <div class="col-sm-8">
+      <h1>YOOO</h1>
+    </div> 
 @endsection

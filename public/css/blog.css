@@ -162,6 +162,14 @@ h6,
   color: #999;
 }
 
+/*
+ * Bio page
+ */
+
+.personal-info {
+  text-align: justify;
+}
+
 
 /*
  * Footer
