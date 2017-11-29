@@ -39,7 +39,6 @@ h6,
   max-width: 60rem;
 }
 
-
 /*
  * Masthead for nav
  */
@@ -166,8 +165,34 @@ h6,
  * Bio page
  */
 
-.personal-info {
-  text-align: justify;
+.bio-profile {
+  text-align: center;
+  font-family: Palatino,
+  Palatino Linotype,
+  Palatino LT STD,
+  Book Antiqua,
+  Georgia,
+  serif;
+  font-size: 1.20rem;
+  color: rgb(44, 44, 44);
+}
+
+.bio-picture {
+  width:220px;
+  height: auto;
+  border-radius: 50%;
+}
+
+.list-social-icons a {
+  color: #495057;
+}
+
+.list-social-icons a:hover {
+  color: #428bca;
+}
+
+.list-social-icons a .fa-lg {
+  font-size: 1.75rem;
 }
 
 
