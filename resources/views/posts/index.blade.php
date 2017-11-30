@@ -18,29 +18,33 @@
   </div>
 @endsection
 
+
+
 @section('posts')
-  <div class="col-sm-8 blog-main">
-    @foreach ($posts as $post)
-      <div class="blog-post">
-        <h2 class="blog-post-title">  
-            {{$post->title}}
-        </h2>
-        <p class="blog-post-meta">Posted on: {{$post->created_at->toDayDateTimeString()}}</p>
-        <div>
-          <?php
-            $truncateText = str_limit($post->body, 400);
-            echo Helper::formattext($truncateText);
-          ?>
-          <p class="text-center"><a href="/posts/{{ $post->id }}">Read More</a></p>
-        </div>
+<div class="col-sm-8 blog-main">
+  @foreach ($posts as $post)
+  <div class="blog-post">
+    <h2 class="blog-post-title">  
+        {{$post->title}}
+    </h2>
+    <p class="blog-post-meta">Posted on: {{$post->created_at->toDayDateTimeString()}}</p>
+    <div>
+      <?php
+        $truncateText = str_limit($post->body, 400);
+        echo Helper::formattext($truncateText);
+      ?>
+      <p class="text-center"><a href="/posts/{{ $post->id }}">Read More</a></p>
+    </div>
         {{--  <p class="blog-post-meta text-right">Last updated: {{$post->updated_at->toDayDateTimeString()}}</p>  --}}
-      </div>
-      <hr>
-    @endforeach
-    <nav class="blog-pagination">
-      {{$posts->links()}}
-    </nav>  
-  </div><!-- /.blog-main -->
+  </div>
+<hr>
+    
+  @endforeach
+
+  <nav class="blog-pagination">
+    {{$posts->links()}}
+  </nav>  
+</div><!-- /.blog-main -->
 @endsection
 
 

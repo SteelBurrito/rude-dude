@@ -1,23 +1,31 @@
-<template>
-    <div class="container">
-        <div class="row">
-            <div class="col-md-8 col-md-offset-2">
-                <div class="panel panel-default">
-                    <div class="panel-heading">Example Component</div>
+<template >
+    <ul id="example-1">
+  <li v-for="list in lists" v-bind:key="list">
+    {{ list }}
+  </li>
+</ul>
 
-                    <div class="panel-body">
-                        I'm an example component!
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
 </template>
 
 <script>
-    export default {
-        mounted() {
-            console.log('Component mounted.')
+export default {
+    data() {
+        return {
+            message: 'Hello Vue',
+            lists: [
+                'satu', 'dua', 'tiga'
+            ],
         }
     }
+}
+
+    /* var app = new Vue({
+    el: 'blog-post',
+    data: {
+        message: 'Hello Vue!',
+        lists: [
+            'satu', 'dua', 'tiga'
+        ],
+    }
+    }) */
 </script>

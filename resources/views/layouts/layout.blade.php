@@ -21,9 +21,8 @@
         @yield('texteditorheader')
     </head>
 
-    <body>
+    <body id="app">
         @include ('layouts.nav')
-
         <main role="main" class="container">
         <div class="d-flex justify-content-center">
             @yield('postcreate')
