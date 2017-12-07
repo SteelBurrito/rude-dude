@@ -9,6 +9,10 @@
 
         <title>@yield('title')</title>
 
+        <!-- CSRF Stuff -->
+        <meta name="csrf-token" content="{{ csrf_token() }}">
+        <script>window.Laravel = { csrfToken: '{{ csrf_token() }}' }</script>
+
         <!-- Bootstrap core CSS -->
         <link href="{{asset('css/bootstrap.min.css')}}" rel="stylesheet">
         <!-- Custom styles for this template -->

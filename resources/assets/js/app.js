@@ -1,3 +1,10 @@
+import Vue from 'vue'
+import VueQuillEditor from 'vue-quill-editor'
+
+// require styles
+import 'quill/dist/quill.core.css'
+import 'quill/dist/quill.snow.css'
+import 'quill/dist/quill.bubble.css'
 
 /**
  * First we will load all of this project's JavaScript dependencies which
@@ -15,7 +22,8 @@ window.Vue = require('vue');
  * or customize the JavaScript scaffolding to fit your unique needs.
  */
 
-Vue.component('example', require('./components/Example.vue'));
+Vue.component('post-create', require('./components/PostCreate.vue'));
+Vue.component('post-show', require('./components/PostShow.vue'));
 
 //create dat vuejs root instance
 const app = new Vue({

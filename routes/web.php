@@ -19,3 +19,8 @@ Route::get('/posts/create', 'PostsController@createpage')->name('createpage');
 Route::get('/me', 'PostsController@me')->name('me');
 Route::get('/posts/{post}', 'PostsController@show');
 Route::post('/posts', 'PostsController@store')->name('store');
+
+// Route::prefix('api')->group(function() {
+//     Route::resource('tasks', 'TaskController');
+//     Route::post('/delete-skill')->uses('TaskController@deleteSkill')->name('delete-skill');
+// }); 
