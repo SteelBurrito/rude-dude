@@ -1,10 +1,9 @@
-<template >
+<template>
     <ul id="example-1">
   <li v-for="list in lists" v-bind:key="list">
     {{ list }}
   </li>
 </ul>
-
 </template>
 
 <script>
