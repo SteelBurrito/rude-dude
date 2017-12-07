@@ -17,14 +17,4 @@ export default {
         }
     }
 }
-
-    /* var app = new Vue({
-    el: 'blog-post',
-    data: {
-        message: 'Hello Vue!',
-        lists: [
-            'satu', 'dua', 'tiga'
-        ],
-    }
-    }) */
 </script>
